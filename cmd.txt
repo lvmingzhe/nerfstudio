@@ -1,0 +1,5 @@
+ns-process-data images --data data/kitti/seq05_100/ --output-dir data/kitti/seq05_100_ns
+
+ns-train nerfacto --data data/kitti/seq05_100_ns
+
+ns-eval --load-config outputs/seq05_100_ns/nerfacto/2023-07-19_200331/config.yml --output-path outputs/seq05_100_ns/nerfacto/2023-07-19_200331/output.json --render-output-path outputs/seq05_100_ns/nerfacto/2023-07-19_200331/render_output
